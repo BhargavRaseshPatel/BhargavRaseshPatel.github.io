@@ -3,33 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Data Form</title>
+    <title>My Personal Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Employee Data Form</h1>
-        <form id="employeeForm">
+    <header>
+        <h1 id="main-heading">Welcome to Online Website</h1>
+    </header>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'About')">About Me</button>
+        <button class="tablinks" onclick="openTab(event, 'WorkExperience')">Work Experience</button>
+        <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+    </div>
+    <div id="About" class="tabcontent">
+        <h2>About Me</h2>
+        <p>Hi, My name is Bhargav Patel.</p>
+        <h2>Skills</h2>
+        <ul>
+            <li>Hard working</li>
+            <li>Never give up</li>
+            <li>Strong coding skills</li>
+        </ul>
+        <h2>Education</h2>
+        <p><strong>Hanson College, North York</strong><br>
+        January 2024 - present</p>
+        <p><strong>Ganpat University, Mehsana, Gujarat</strong><br>
+        July 2018 – May 2022<br>
+        Bachelor of Technology in Computer Engineering, 7.89 CGPA<br>
+        Email: <a href="mailto:bhargapatel@gmail.com">bhargapatel@gmail.com</a></p>
+    </div>
+    <div id="WorkExperience" class="tabcontent">
+        <h2>Work Experience</h2>
+        <p><strong>Acty System, Ahmedabad, India</strong><br>
+        Six months as Project Trainee (Internship) + Six months as Programmer</p>
+        <ul>
+            <li>Made a project on WPF (Windows Presentation Foundation) with MySql Database.</li>
+            <li>Worked on Angular with DevExtreme Framework on a Web application to transfer an existing WPF project into a Web Application.</li>
+        </ul>
+        <p><strong>SCHOOL SERVICE (Seven Semester in B.Tech)</strong><br>
+        <ul>
+            <li>Made an Android application for School Service using Java.</li>
+            <li>Facilitates communication between parents, teachers, and principals regarding children’s information like attendance, homework, marks, calendar, time-table, etc.</li>
+            <li>Used Firestore for the database and Firebase storage for image storing.</li>
+        </ul>
+        <p><strong>DISNEY CLONE</strong></p>
+        <ul>
+            <li>A web-based application replicating the UI of Disney using data from an API.</li>
+            <li>Project based on React application.</li>
+        </ul>
+    </div>
+    <div id="Contact" class="tabcontent">
+        <h2>Enter your contact information</h2>
+        <form id="contactForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
+            <input type="text" id="name" name="name">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="position">Position:</label>
-            <input type="text" id="position" name="position" required><br><br>
-
-            <label for="department">Department:</label>
-            <input type="text" id="department" name="department" required><br><br>
-
-            <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate" name="startDate" required><br><br>
-
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
             <button type="submit">Submit</button>
         </form>
-        <div id="message"></div>
-        <a href="employee-data.html" class="view-data">View Employee Data</a>
     </div>
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 My Personal Website</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
